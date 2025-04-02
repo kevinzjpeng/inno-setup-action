@@ -17,8 +17,7 @@ After that, it can be used as part of your GitHub Actions workflow.
 
 ```
       - name: Run Inno Setup
-        uses: robin24/inno-setup-action@v1
+        uses: kevinzjpeng/inno-setup-action@v1
         with:
           filepath: ./sim-cpdlc.iss
           options: /O+
-```
