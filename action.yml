@@ -5,9 +5,12 @@ inputs:
   filepath:
     description: 'Path to ISS file'
     required: true
+  options:
+    description: 'Additional options to pass to Inno Setup'
+    required: false
 
 runs:
   using: 'composite'
   steps:
-    - run: ${{ github.action_path }}\src\ISCC.exe ${{inputs.filepath}}
+    - run: ${{ github.action_path }}\src\ISCC.exe ${{inputs.filepath}} ${{inputs.options}}
       shell: cmd
